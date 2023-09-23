@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="card">
+        <h1 class="logo">Password Generator <span></span></h1>
+        <textarea class="result"  spellcheck="false"> Loading...</textarea>
+        <div>
+            <div class="userCheckboxController">
+                <div>
+                    <input type="checkbox" name="letters " id="letters" checked/>
+                    <label for="letter">Letters</label>   
+                </div>
+                <div>
+                    <input type="checkbox" name="numbers " id="numbers" checked />
+                    <label for="numbers">Numbers</label>   
+                </div>
+                <div>
+                    <input type="checkbox" name="symbols " id="symbols" checked />
+                    <label for="symbols">Symbols</label>   
+                </div>
+                
+            </div>
+            <div class="userRangeController">
+                <label for="slider">Length</label>
+                <input type="range" max="30" min="4" value="8"  id="slider"/>
+            </div>
+            <button class="btn secondary" id="copy" onclick="copy_to_clipboard()">Copy</button>
+            <button class="btn primary" onclick="generate_random_password()">Generator</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
